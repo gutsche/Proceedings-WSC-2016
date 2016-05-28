@@ -149,12 +149,17 @@ The sufficiently large statistics of these simulated interactions allows to make
 \subsection{DETECTOR SIMULATION} 
 \label{subsec:detectorsimulation}
 
+To verify or even extend the theory, experiments and the comparison of experimental results with theoretical predictions are needed. The event simulation step described in Sec.~\ref{subsec:eventsimulation} is not directly comparable with a potential experimental setup. This is because we can only very few of the particles of the Standard Model produce, control and measure. 
+
+Of the leptons, only the electron and muon are stable and observable. The tau is decaying into electrons or muons very quickly and the neutrinos are so weakly interacting that neutrino physics is its own branch in particle physics. The quarks are not observable individually at all. Governed by the strong force and a concept called confinement, quarks can only be observed in 2 or 3 quark bound states. 3 quark bound states are called baryons and the most prominent examples are protons and neutrons. 2 quark bound states are called mesons. Because we also cannot control the initial state of a particle interaction to all extend. We can collide for example protons with protons, which means two 3-quark states are colliding, giving multiple possibilities how a certain quark quark ineraction can be produced. Also these effects can be simulated using Monte Carlo techniques.
+
+The same effect that binds quarks in mesons and baryons also governs the constitution of the final state of an interaction. Because individual quarks cannot exist on their own, quarks that are produced in an interaction hadronize by collecting additional quarks from the vaccum (spontaneous quark anti-quark production following $E=mc~2$) or from neigbouring quarks in the final state of the interaction. Hadronization is described as well with the help of Monte Carlo techniques using underlying models and theories. The same is true for particles that fragment or decay while transversing a detector material.
+
+Detectors are made of matter and detect particles by interacting with them. Dtectors can consists of a gas that is ionized by particles, or a plastic that produces light when a particle transverses the material, or a semi-conductor in which a current can be measured when a particle is passing through. In simulation, we know the final state of an interaction. We encapsulated all theories and models to describe the enegry depositions of particles in material in a single package that is generally used, also outside particle physics, called Geant. Geant simulates the energy deposition of a particle in material, depending on the type of material, the amount of material and the three-dimensional cmoposition of various materials that make up a detector or detector system. 
+
+The last part of the detector simulation step is to translate the energy depositions of the particles simulated by Geant into electrical signals of the used detectors and detector systems. After this step, a simulated interaction and an experimentally measured interaction are equivalent can be treated the same in the following.
 
 
-
-
-
-Particle interaction or processes of a specific  where the strength and kinematics of a specific initial state of particles
 
 
 
