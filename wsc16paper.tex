@@ -133,7 +133,28 @@ The Standard Model uses the principles of Quantum Field Theory to mathematically
 \section{SIMULATION}
 \label{sec:simulation}
 
+The rules of particle physics are governed by quantum physics. Therefore description and predictions of particle physics interactions and phenomena have to deal with probablities and sufficiently large statistics to make meaningful statements. For the experiment, this means that only particle interactions that have been observed in sufficient numbers can be compared to theoretical predictions. Fortunately, experiments are mostly event driven. Individual particle interactions, may they be collisions or otherwise produced, can be treated individually. This makes particle physics a highly parallelizable science.
 
+\subsection{EVENT SIMULATION} 
+\label{subsec:eventsimulation}
+
+The empirical calculation of a particle interaction is only possible in approximation and is called event simulation. The problem of describing mathematically a simple collision of two particles producing a different set of two particles at the first and most basic order can be calculated simply by calculating the exchange of a force particle. First one calculates the interaction of the two incoming particles with the force particle (first vertex) and then the interaction of the same force particle with the outgoing second set of two particles (second vertex). But higher order corrections can play a significant role in calculating this collision. There are two kinds of higher order corrections that are important. 
+
+The first is extending the number of particles and force particles that are produced and exchanged between the first and second vertex. In particle physics speak, the number of vertices is increased and therefore the order of the calculation increases. The more orders are calculated, the closer the approximation of the calculation to the truth. The first order is called the "leading order (LO)" and the next following orders are called "next-to-leader order (NLO)" and "next-to-next-to-leading order (NNLO)". NNLO calculations are currently state-of-the-art in particle physics.
+
+The second kind of higher order correction is harder to approximate. These corrections have to do with additional force particles radiated from the incoming and outgoing particles and therefore changing the calculation from above. As there are many possibilities to radiate extra particles with a wide range of possible kinematical parameters (energy, momentum to name a few), a precise or even mathematical approximation is very difficult. Particle physics uses Monte Carlo techniques to tackle these problems. A sufficiently large number of interactions is calculated starting from a randum number seed. Every simulated interaction is using a different randum number seed. The random number is used to choose the composition of the empirical calculation up to the order specified, meaning it chooses randomly how many vertices need to be calculated and what the internal kinematical parameters of these vertices are. Then the random number is used to determine if and how particles are radiated and this is included in the calculation as well. Probability density functions are used to constrain the possibilities that can be chosen. These functions are determined by theory confirmed by experiment or by experiment directly.
+
+The sufficiently large statistics of these simulated interactions allows to make statistically significant statements about the interaction of interest, including kinematic distributions of the final state, through averaging the results. Sufficiently large statistics means that we are covering the phase space of allowed configurations sufficiently that on average we get the correct result.
+
+\subsection{DETECTOR SIMULATION} 
+\label{subsec:detectorsimulation}
+
+
+
+
+
+
+Particle interaction or processes of a specific  where the strength and kinematics of a specific initial state of particles
 
 
 
