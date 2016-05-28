@@ -1,0 +1,145 @@
+%**************************************************************************
+%*
+%*  Paper: ``INSTRUCTIONS FOR AUTHORS OF LATEX DOCUMENTS''
+%*
+%*  Publication: 2016 Winter Simulation Conference Author Kit
+%*
+%*  Filename: wsc16paper.tex
+%*
+%*  Date: January 31, 2001   Time:  9:45 PM
+%*      BASE of current version: Feb 01, 2010 (primary WSC'10 LaTeX file)
+%*
+%*  Word Processing System: TeXnicCenter and MiKTeX
+%*
+%*
+%*  All files need the following
+\input{wsc16style.tex}     % download from author kit.  Style files for wsc formatting. Don't remove this line - required for generating the final paper!
+
+\documentclass{wscpaperproc}
+\usepackage{latexsym}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+
+%
+%****************************************************************************
+% AUTHOR: You may want to use some of these packages. (Optional)
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+%****************************************************************************
+
+
+
+%
+%****************************************************************************
+% AUTHOR: If you do not wish to use hyperlinks, then just comment
+% out the hyperref usepackage commands below.
+
+%% This version of the command is used if you use pdflatex. In this case you
+%% cannot use ps or eps files for graphics, but pdf, jpeg, png etc are fine.
+
+\usepackage[pdftex,colorlinks=true,urlcolor=blue,citecolor=black,anchorcolor=black,linkcolor=black]{hyperref}
+
+%% The next versions of the hyperref command are used if you adopt the
+%% outdated latex-dvips-ps2pdf route in generating your pdf file. In
+%% this case you can use ps or eps files for graphics, but not pdf, jpeg, png etc.
+%% However, the final pdf file should embed all fonts required which means that you have to use file
+%% formats which can embed fonts. Please note that the final PDF file will not be generated on your computer!
+%% If you are using WinEdt or PCTeX, then use the following. If you are using
+%% Y&Y TeX then replace "dvips" with "dvipsone"
+
+%%\usepackage[dvips,colorlinks=true,urlcolor=blue,citecolor=black,%
+%% anchorcolor=black,linkcolor=black]{hyperref}
+%****************************************************************************
+
+
+
+		
+
+
+
+%
+%****************************************************************************
+%*
+%* AUTHOR: YOUR CALL!  Document-specific macros can come here.
+%*
+%****************************************************************************
+
+% If you use theoremes
+\newtheoremstyle{wsc}% hnamei
+{3pt}% hSpace abovei
+{3pt}% hSpace belowi
+{}% hBody fonti
+{}% hIndent amounti1
+{\bf}% hTheorem head fontbf
+{}% hPunctuation after theorem headi
+{.5em}% hSpace after theorem headi2
+{}% hTheorem head spec (can be left empty, meaning `normal')i
+
+\theoremstyle{wsc}
+\newtheorem{theorem}{Theorem}
+\renewcommand{\thetheorem}{ \arabic{theorem}}
+\newtheorem{corollary}[theorem]{Corollary}
+\renewcommand{\thecorollary}{\arabic{corollary}}
+\newtheorem{definition}{Definition}
+\renewcommand{\thedefinition}{\arabic{definition}}
+
+
+%#########################################################
+%*
+%*  The Document.
+%*
+\begin{document}
+
+%***************************************************************************
+% AUTHOR: AUTHOR NAMES GO HERE
+% FORMAT AUTHORS NAMES Like: Author1, Author2 and Author3 (last names)
+%
+%		You need to change the author listing below!
+%               Please list ALL authors using last name only, separate by a comma except
+%               for the last author, separate with "and"
+%
+\WSCpagesetup{Gutsche}
+
+% AUTHOR: Enter the title, all letters in upper case
+\title{Dark Matter And Super Symmetry: Exploring And Explaining The Universe With Simulations At The LHC}
+
+% AUTHOR: Enter the authors of the article, see end of the example document for further examples
+\author{Oliver Gutsche\\ [12pt]
+Scientific Computing Division \\
+Fermi National Accelerator Laboratory\\
+P.O.Box 500\\
+Batavia, IL, 60510, USA\\
+}
+
+\maketitle
+
+\section*{ABSTRACT}
+The Large Hadron Collider (LHC) at CERN in Geneva, Switzerland, is one of the largest machines on this planet. It is built to smash protons into each other at unprecedented energies to reveal the fundamental constituents of our universe. The 4 detectors at the LHC record multi-Petabyte datasets every year. The scientific analysis of this data requires equally large simulation datasets of the collisions based on the theory of particle physics, the Standard Model. The goal is to verify the validity of the Standard Model or of theories that extend the Model like the concepts of Super Symmetry and an explanation of Dark Matter. I will give an overview of the nature of simulations needed to discover new particles like the Higgs Boson in 2012, and review the different areas where simulations are indispensable: from the actual recording of the collisions to the extraction of scientific results to the conceptual design of improvements to the LHC and its experiments.
+
+\section{INTRODUCTION}
+\label{sec:intro}
+The LHC~\cite{1748-0221-3-08-S08001}
+
+\section*{ACKNOWLEDGMENTS}
+Place the acknowledgments section, if needed, after the main text, but before any appendices and the references. The section heading is not numbered.
+These instructions are adapted from instructions that have been updated and improved by proceedings editors and several other individuals, who are too numerous to name separately (our apologies, but it is necessary), since the first set of instructions were written by Barry Nelson for the 1991 WSC.
+
+\appendix
+
+
+% Please don't exchange the bibliographystyle style
+\bibliographystyle{wsc}
+% AUTHOR: Include your bib file here
+\bibliography{wsc16paper}
+
+\section*{AUTHOR BIOGRAPHIES}
+
+\noindent {\bf Oliver Gutsche} is a staff scientist at the Fermi National Accelerator Laboratory and member of the CMS collaboration of 2,500 physicists, which is operating one of the 4 detectors at the Large Hadron Collider (LHC) at CERN in Geneva, Switzerland. After the Higgs Boson discovery in 2012, his research is focusing on new physics beyond the established theory of particle physics called the Standard Model, especially in the areas of Super Symmetry and Dark Matter. In his role as Assistant Head of the Scientific Computing Division, Dr. Gutsche coordinates the computing needs of the High Energy, Neutrino and Muon Particle Physics experiments at the laboratory. He has intimate knowledge of the large scale computing solutions used for the LHC experiments to analyze multi-Petabyte size datasets on distributed computing infrastructures of many 100,000 cores, having architected many of the used systems and leading the computing operations team of CMS during the first running period of the LHC. His email address is \email{gutsche@fnal.gov}.\\
+
+
+\end{document}
+
