@@ -159,30 +159,25 @@ Detectors are made of matter and detect particles by interacting with them. Dtec
 
 The last part of the detector simulation step is to translate the energy depositions of the particles simulated by Geant into electrical signals of the used detectors and detector systems. After this step, a simulated interaction and an experimentally measured interaction are equivalent can be treated the same in the following.
 
+\subsection{RECONSTRUCTION}
+\label{subsec:reconstruction}
+
+The current understanding of nature in the form of the Standard Model is very advanced. New discoveries or improvements require higher and higher energies in the final state of the produced particle interaction. This requires that particle accelerators are becoming more advanced but also more difficult and costly to build and operate. To maximize the variety of investigations of the produced collisions, a complete capture of the final state of the collisions is required. Complicated detector systems that close to hermetically surround the collision regions are built. Different detector techniques are used to measure different aspects of the final states of the collisions. Charged particle tracks are measured with tracking detectors closests to the interaction region. Particle tracks give momentum and direction of charged particles, if the tracking detectors are situated in a magnetif field. Calorimeters are arranged outside the tracking detectors to measure the energy of particles. Muons are very minimally interacting with material. Special muon detectors outside the calorimeters are built to detect the muons.
+
+Software is used to translate the signals and location of the detectors into reconstructed objects that describe particles or jets of particles. Only at this stage, a comparison to simulation can be done and physics results can be extracted.
+
+\section{LARGE HADRON COLLIDER AND THE CMS EXPERIMENT}
+\label{sec:lhc}
+
+The Large Hadron Collider (LHC)~\cite{1748-0221-3-08-S08001} is the current highest energy particle collider in the world. It accelerates protons to 6.5 TeV energy in two circular evacuated beampipes. The beams of protons are brought to collision in 4 points around the almost 17 miles circumference ring. The interaction rate in a single collision point is 40 MHz. Each of the 4 collision points is instrumented with a large particle physics detector system, two multi-purpose detectors and one detector for heavy quark physics and heavy ion physics each. The two multi-purpose detectors have the same physics program but using different detector technology and analysis strategies. This is needed to cross-check results because a second machine of this size would be too expensive to build. In the following, we will concentrate on ond of the two multi-purpose detectors.
+
+The CMS collaboration built, maintains and operates the CMS detector. CMS stands for "Compact Muon Solenoid", describing the main feature of the compact architecture of the detector system and the emphasis on muon detection. In the innermost layer surrounding the coliision region, a silicon pixel detector is detecting charged particle trajectories. Pixel detectors are like a three-dimensional array of digital camera CMOS chips specifically manufactures to withstand the high data rates and radiation backgrounds from particle collisions of the LHC. Pixel detectors have a very good spatial resultion, needed to detect individual particles which have not yet moved apart significantly while traveling outwards after the collision. The pixel tracker is surrounded by a silicon strip tracker which has a more course resolution but covers a lot more volume. Surrounding the tracking systems is the electro-magnetic calorimeter built from lead-tungsten crystals. The crystals are transparent and produce light proportional to the energy of a passing particle. Completing the calorimetry is the hadronic calorimeter, a sandwich of brass and scintillators to stop hadrons and to measure the penetration depth which is proportional of the energy of the hadrons. The tracking and calorimeter systems are surrounded by a superconducting solenoid producing a magnetic field of 3.8T. With its solenoid size of 6 times 13 meters, it is the largest and most powerful magnet of its kind. Completing the CMS detector is the muon detector system surrounding the magnet instrumenting its return yoke. 
+
+Not all collisions of the 40 MHz collision rate are being recorded and saved for analysis. Most of the collisions can be identified quickly as un-interesting events where the physics is well understood. Also the total data rate and subsequent data volume would be about 1 PB every minute if all of the collisions are recorded. CMS uses a 2 level trigger system to identify collisions for physics analysis. The first level is implemented in custom-made electronics and reduces the data rate to 100 KHz. All detector components have buffers to allow the level 1 decision to be taken within 3 micro-seconds. For selected events, the signals of all detector components are read out and combined into a single event, which is then passed on to the high level trigger. The high level trigger consists of a dedicated compute farm at the detector pit that performs a streamlined version of the full event reconstruction. The high level triger compute farm is dimensioned to sustain an output rate of 1 kHz and an average reconstruction time per event of 200 milliseconds, currently amounting to 22k compute cores. A trigger decision is taken according to the reconstructed information and the events are sent for offline processing, storage and analysis.
+
+Simulations are used in all stages of designing and maintaining the trigger. Starting from the physics program, first and high level trigger selections are designed to maximize interesting events that have the potential to improve the Standard Model or find new physics not yet described by the Standard Model. These selections are then optimized to fit within the latencies of the trigger levels and the timing is checked. Constant feedback from the actual data recording is needed to improve the trigger simulation and the event selection for physics.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Also called elementary particle physics, its experimental results are based on the analysis of many individual detector measurements in comparison to corresponding simulations that are based on the current understanding of the theory. Because of this, HEP was and is traditionally a very data intensive and trivially parallelizable science discipline.
-
-The LHC~\cite{1748-0221-3-08-S08001}
 
 \section*{ACKNOWLEDGMENTS}
 Place the acknowledgments section, if needed, after the main text, but before any appendices and the references. The section heading is not numbered.
